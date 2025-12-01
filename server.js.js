@@ -3,13 +3,10 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const { Pool } = require('pg');
 
-const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'yoneco_db',
-  password: 'tawonga',   // use your postgres password
-  port: 5432
+const db = new Pool({
+  connectionString: "postgresql://yoneco_db_qt0v_user:wpUAchzamjzvwaUGh3BWtTj4TeR8lMkk@dpg-d4medtogjchc73b79j0g-a/yoneco_db_qt0v"
 });
+
 
 const app = express();
 app.use(cors());
